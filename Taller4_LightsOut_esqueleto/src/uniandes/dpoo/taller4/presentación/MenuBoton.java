@@ -1,4 +1,4 @@
-package uniandes.dpoo.taller4.modelo.presentación;
+package uniandes.dpoo.taller4.presentación;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;

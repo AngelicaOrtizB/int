@@ -1,4 +1,4 @@
-package uniandes.dpoo.taller4.modelo.presentación;
+package uniandes.dpoo.taller4.presentación;
 import uniandes.dpoo.taller4.modelo.*;
 import java.awt.*;
 import java.awt.Color;
