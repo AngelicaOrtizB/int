@@ -1,6 +1,5 @@
 package uniandes.dpoo.taller4.presentación;
 
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
 import javax.swing.JLabel;

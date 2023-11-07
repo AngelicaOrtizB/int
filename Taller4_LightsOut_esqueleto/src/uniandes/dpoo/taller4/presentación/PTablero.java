@@ -11,13 +11,15 @@ public class PTablero extends JPanel implements MouseListener {
 	public int ultima_fila;
 	public int ultima_columna;
 	public int dimension;
+	public int dificultad;
 	
-	public PTablero( int dimension, Tablero tablero, PJugadas pjugadas) {
+	public PTablero( int dimension, Tablero tablero, PJugadas pjugadas, int dificultad) {
 
        
 		this.dimension = dimension;
 		this.tablero = tablero;
 		this.pjugadas= pjugadas;
+		this.dificultad= dificultad;
 		this.addMouseListener(this);
 		
 	}
@@ -25,7 +27,7 @@ public class PTablero extends JPanel implements MouseListener {
 		super.paint(g);
 		Graphics2D g2d = (Graphics2D)g;
 		boolean matriz[][] = tablero.darTablero();
-		tablero.desordenar(1);
+		tablero.desordenar(dificultad);
 		for(int j = 0; j < dimension; j++) {
 			for(int i = 0; i < dimension; i++) {
 				if(matriz[i][j]==true) {
@@ -68,6 +70,7 @@ public class PTablero extends JPanel implements MouseListener {
 		this.ultima_columna = casilla[1];
 		repaint();
 		pjugadas.update(this.tablero.darJugadas()+"");
+		
 	}
 	@Override
 	public void mouseReleased(MouseEvent e) {
@@ -82,6 +85,9 @@ public class PTablero extends JPanel implements MouseListener {
 	@Override
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
+		
+	}
+	public void cambiarTamanio(String tamanio) {
 		
 	}
 	
